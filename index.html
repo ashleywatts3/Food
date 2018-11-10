@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+  <link href="css/index.css" rel="stylesheet" />
+  <title>Where to eat</title>
+</head>
+
+<body>
+  <!-- <body onload="checkSecure();"> -->
+  <!-- Top Nav Bar -->
+  <nav>
+    <a onclick="openNav()">&#9776;</a>
+    <span>Where to eat</span>
+  </nav>
+  <!-- Top Nav Bar Ends -->
+
+
+  <!-- Queries -->
+  <div id="queries">
+    <!-- Select Category -->
+    <div class="boxes">
+      <label for="categories">Filter by categories</label>
+      <select id="categories" name="category">
+        <option value="" disabled selected hidden>Please choose a category</option>
+      </select>
+    </div>
+    <!-- Select Cuisines -->
+    <div class="boxes">
+      <label for="cuisines">Filter by cuisines</label>
+      <select id="cuisines" name="cuisines">
+        <option value="" disabled selected hidden>Please choose a cuisine</option>
+      </select>
+    </div>
+    <!-- Search Query -->
+    <label for="search">Filter by search query</label>
+    <input id="search" type="text" name="Search" placeholder="Enter your search query">
+    <button class="btn" onclick="applyAll();">
+      <span>Apply any!</span>
+    </button>
+  </div>
+  <!-- Queries end -->
+
+  <!-- Map Canvas -->
+  <div id="map-canvas">
+    <h3>Loading.... Please wait...</h3>
+  </div>
+  <!-- Map Canvas end -->
+
+  <!-- Restaurants -->
+  <div class="card" id="restaurants">
+
+  </div>
+  <!-- Restaurants end -->
+
+  <!-- Scripts -->
+  <script src="cordova.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN9Dwitb2cjEuouUSW2As_Ot5vrzLmhY0&libraries=geometry"></script>
+  <script src="js/index.js"></script>
+  <!-- End of body -->
+</body>
+
+</html>
